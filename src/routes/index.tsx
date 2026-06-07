@@ -19,7 +19,7 @@ import p1 from "@/assets/kishakidha.jpg";
 import p2 from "@/assets/AYODHYAPURI.jpg";
 import p3 from "@/assets/harmony.jpg";
 import p4 from "@/assets/RadheShyam.jpeg";
-import about2 from "@/assets/about-hero.png";
+import about2 from "@/assets/about-hero.jpeg";
 
 
 export const Route = createFileRoute("/")({
@@ -331,7 +331,7 @@ function HomePage() {
                 { n: 1100, s: "+", l: "Happy Families", icon: Home },
                 { n: 950, s: "+", l: "Properties Closed", icon: Building2 },
                 { n: 11, s: "+", l: "Years of Trust", icon: ShieldCheck },
-                { n: 12, s: "+", l: "Listings Properties", icon: BadgeCheck },
+                { n: 12, s: "+", l: "Listings Projects", icon: BadgeCheck },
               ].map(({ n, s, l, icon: Icon }, i) => (
                 <Reveal key={l} delay={i * 100} direction="up">
                   <div
@@ -402,7 +402,7 @@ function HomePage() {
                 <h3
                   className="text-primary"
                   style={{
-                    fontFamily: "'Great Vibes', cursive",
+                    fontFamily: "  serif",
                     fontSize: "2.4rem",
                     fontWeight: 500,
                     lineHeight: 1,
@@ -666,7 +666,7 @@ export function ContactSection() {
             <div className="mt-6 sm:mt-8 space-y-3 text-sm text-white/80">
               {[
                 ["📍", "509,Hilltown Impressa, Opp.Parikh Hospital, Nikol, Ahmedabad, India 380049"],
-                ["📞", "+91  9925004858"],
+                ["📞", "+91  9925004160"],
                 ["✉️", "info@thenestrealty@gmail.com"],
               ].map(([icon, text], i) => (
                 <div
@@ -707,9 +707,9 @@ export function ContactSection() {
             <select className="w-full bg-transparent border border-white/20 px-4 py-3 rounded-md text-sm focus:border-primary outline-none transition-colors duration-200">
               <option className="bg-accent">I'm interested in...</option>
               <option className="bg-accent">Buying a property</option>
-              <option className="bg-accent">Selling a property</option>
-              <option className="bg-accent">Investment advisory</option>
-              <option className="bg-accent">Land acquisition</option>
+              <option className="bg-accent">Sole Selling Enquiry</option>
+              <option className="bg-accent">Project Marketing</option>
+              <option className="bg-accent">Investment Consulting</option>
             </select>
             <textarea
               rows={4}

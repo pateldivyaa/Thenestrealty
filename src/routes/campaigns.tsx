@@ -21,12 +21,11 @@ const campaigns = [
   {
     number: "01",
     eyebrow: "TNTC CAMPAIGN",
-    title: "Bruthi toh\nAhiya Vase Che.",
-    description: "A heartfelt campaign that celebrates living close to nature with modern comforts and thoughtful spaces.",
-    reels: "4–5 Reels",
+    title: "Vruddhi Toh \nAhiya J Vase Che",
+    // description: "A heartfelt campaign that celebrates living close to nature with modern comforts and thoughtful spaces.",
+    reels: "6 Reels",
     type: "Concept Campaign",
     theme: "light",
-    // ✅ FIXED: playlistId and playlistUrl now match correctly
     playlistId: "PLzjqr-vXhLMGsxPcvputEas6ewApWbvJm",
     playlistUrl: "https://www.youtube.com/playlist?list=PLzjqr-vXhLMGsxPcvputEas6ewApWbvJm",
     color: "#C8973A",
@@ -34,22 +33,21 @@ const campaigns = [
   {
     number: "02",
     eyebrow: "AARYAMAN KALPRUKSH CAMPAIGN",
-    title: "Maango\nTe Made.",
-    description: "A promise of thoughtful living, crafted for a better tomorrow and a life full of possibilities.",
-    reels: "4–8 Reels",
+    title: "Maango \nTe Malee.",
+    // description: "A promise of thoughtful living, crafted for a better tomorrow and a life full of possibilities.",
+    reels: "5 Reels",
     type: "Concept Campaign",
     theme: "light",
-    // ✅ FIXED: playlistId and playlistUrl now match correctly
     playlistId: "PLzjqr-vXhLMHX91qE8y4DE1fN_WJqcRtW",
     playlistUrl: "https://www.youtube.com/playlist?list=PLzjqr-vXhLMHX91qE8y4DE1fN_WJqcRtW",
     color: "#C8973A",
   },
   {
     number: "03",
-    eyebrow: "NORTON CHANNEL PARTNER MEET",
-    title: "Norton\nChannel Partner Meet.",
-    description: "A successful meet that brought together our valuable channel partners to align, connect and grow.",
-    reels: "3–4 Reels",
+    eyebrow: "CHANNEL PARTNER MEET",
+    title: "Channel\nPartner Meet.",
+    // description: "A successful meet that brought together our valuable channel partners to align, connect and grow.",
+    reels: "6 Reels",
     type: "Channel Partner Meet",
     theme: "dark",
     playlistId: "PLzjqr-vXhLMG6GZFlx3Tzz9fG6n2OUozK",
@@ -60,8 +58,8 @@ const campaigns = [
     number: "04",
     eyebrow: "ANNUAL EXCELLENCE AWARD",
     title: "Annual\nExcellence Award.",
-    description: "Celebrating achievements, recognizing hard work and inspiring excellence across our team.",
-    reels: "6–7 Reels",
+    // description: "Celebrating achievements, recognizing hard work and inspiring excellence across our team.",
+    reels: "6 Reels",
     type: "Team Celebration",
     theme: "light",
     playlistId: "PLzjqr-vXhLMFkflVHW5la8OXGVER0yk3m",
@@ -71,10 +69,10 @@ const campaigns = [
 ];
 
 const heroStats = [
-  { icon: Megaphone, value: "25+", label: "Campaigns", sub: "active projects" },
-  { icon: Video, value: "120+", label: "Reels Created", sub: "across platforms" },
-  { icon: Users, value: "50+", label: "Channel Partners", sub: "nationwide" },
-  { icon: MapPin, value: "15+", label: "Cities Covered", sub: "and growing" },
+  { icon: Megaphone, value: "50000+", label: "Qualified Leads Generated", sub: "active projects" },
+  { icon: Video, value: "100+", label: "Campaign Reels Created", sub: "across platforms" },
+  { icon: Users, value: "5M+", label: "Reel Views Generated", sub: "nationwide" },
+  { icon: MapPin, value: "20M+", label: "Audience Reach", sub: "and growing" },
 ];
 
 const bottomStats = [
@@ -154,33 +152,32 @@ function PlaylistStrip({
       >
         <ChevronRight className="h-4 w-4" />
       </button>
-      <div ref={scrollRef} className="strip-scroll flex gap-3 overflow-x-auto">
-        {tiles.map((i) => (
-
-          <a key={i}
-            href={playlistUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="strip-tile flex-none"
-          >
-            <div className="strip-thumb relative">
-              <iframe
-                src={`https://www.youtube.com/embed/videoseries?list=${playlistId}&index=${i + 1}&controls=0&modestbranding=1&showinfo=0&rel=0`}
-                title={`${campaignTitle} reel ${i + 1}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="strip-iframe"
-                loading="lazy"
-              />
-              <div className="strip-play-overlay">
-                <div className="strip-play-btn" style={{ background: color }}>
-                  <Play className="h-3.5 w-3.5 text-white fill-white ml-0.5" />
-                </div>
-                <p className="strip-overlay-title">{campaignTitle}</p>
+      <div ref={scrollRef} className="strip-scroll flex gap-2 overflow-x-auto">        {tiles.map((i) => (
+        <a
+          key={i}
+          href={playlistUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="strip-tile flex-none"
+        >
+          <div className="strip-thumb relative">
+            <iframe
+              src={`https://www.youtube.com/embed/videoseries?list=${playlistId}&index=${i + 1}&controls=0&modestbranding=1&showinfo=0&rel=0`}
+              title={`${campaignTitle} reel ${i + 1}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="strip-iframe"
+              loading="lazy"
+            />
+            <div className="strip-play-overlay">
+              <div className="strip-play-btn" style={{ background: color }}>
+                <Play className="h-3.5 w-3.5 text-white fill-white ml-0.5" />
               </div>
+              <p className="strip-overlay-title">{campaignTitle}</p>
             </div>
-          </a>
-        ))}
+          </div>
+        </a>
+      ))}
       </div>
     </div>
   );
@@ -203,15 +200,16 @@ function CampaignRow({ c, index }: { c: typeof campaigns[0]; index: number }) {
     <section className={`campaign-row ${bgClass}`} data-reveal>
       <div className={`reveal-item campaign-inner ${reversed ? "campaign-reversed" : ""}`}>
 
-        {/* ── Text side ── */}
-        <div className="campaign-body">
+        {/* ── Col 1: Number only ── */}
+        <div className="campaign-number-col">
           <span className="campaign-number">{c.number}</span>
+        </div>
+
+        {/* ── Col 2: Content ── */}
+        <div className="campaign-body">
           <span className="campaign-eyebrow">{c.eyebrow}</span>
-
-          {/* ✅ FIXED: use white-space pre-line so \n renders as line break */}
           <h2 className="campaign-title font-display">{c.title}</h2>
-
-          <p className="campaign-desc">{c.description}</p>
+          {/* <p className="campaign-desc">{c.description}</p> */}
 
           <div className="campaign-meta">
             <span className="meta-item">
@@ -227,8 +225,8 @@ function CampaignRow({ c, index }: { c: typeof campaigns[0]; index: number }) {
             </span>
           </div>
 
-
-          <a href={c.playlistUrl}
+          <a
+            href={c.playlistUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="watch-btn"
@@ -241,7 +239,7 @@ function CampaignRow({ c, index }: { c: typeof campaigns[0]; index: number }) {
           </a>
         </div>
 
-        {/* ── Strip side ── */}
+        {/* ── Col 3: Videos ── */}
         <div className="campaign-media">
           <PlaylistStrip
             playlistId={c.playlistId}
@@ -251,6 +249,7 @@ function CampaignRow({ c, index }: { c: typeof campaigns[0]; index: number }) {
             theme={c.theme}
           />
         </div>
+
       </div>
     </section>
   );
@@ -273,18 +272,11 @@ function Campaigns() {
         />
 
         <div className="container-x relative z-10 pt-28 pb-0 md:pt-36">
-          <div className="hero-eyebrow flex items-center gap-3 mb-6">
-            <span className="block h-px w-10 bg-primary" />
-            <span className="text-xs tracking-[0.25em] uppercase text-primary font-semibold">
-              Campaign Showcase
-            </span>
-          </div>
           <div className="max-w-2xl">
             <h1 className="hero-h1 font-display">
-              <span className="block">Campaigns</span>
-              <span className="block">
-                That <em className="camp-accent">Create Impact.</em>
-              </span>
+              <span className="block hero-h3-line1"> Campaign </span>
+              <span className="block text-primary hero-h3-line2">Showcase</span>
+              <span className="block hero-h1-brand font-display">Create Impact</span>
             </h1>
             <p className="hero-sub mt-5 max-w-md text-muted-foreground text-base leading-relaxed">
               Creative real estate campaigns that connect people with projects and deliver real results.
@@ -453,13 +445,19 @@ function Campaigns() {
         }
         .hero-h1 {
           font-size: clamp(2.8rem, 5.5vw, 5.2rem);
-          font-weight: 700; line-height: 1.0; letter-spacing: -0.02em;
+          font-weight: 400;
+          line-height: 1.0;
+          letter-spacing: -0.02em;
           color: hsl(var(--foreground));
+          opacity: 0;
+          animation: fadeInUp 0.75s 0.15s ease both;
         }
-        .camp-accent { color: hsl(var(--primary)); font-style: italic; }
-        .hero-eyebrow { opacity: 0; animation: fadeInUp 0.55s 0.05s ease both; }
-        .hero-h1      { opacity: 0; animation: fadeInUp 0.75s 0.15s ease both; }
-        .hero-sub     { opacity: 0; animation: fadeInUp 0.55s 0.30s ease both; }
+        .hero-h1-brand {
+          color: hsl(var(--primary));
+          font-style: italic;
+          font-weight: 400;
+        }
+        .hero-sub { opacity: 0; animation: fadeInUp 0.55s 0.30s ease both; }
 
         /* ══ CAMPAIGN ROWS ══ */
         .campaign-row { border-bottom: 1px solid hsl(var(--border)); }
@@ -469,39 +467,69 @@ function Campaigns() {
         .campaign-bg-sage { background: hsl(150 20% 96%); }
         .campaign-dark    { background: hsl(220 22% 11%); color: #fff; }
 
-        /* ✅ FIXED: equal 50/50 grid so text has full half width */
+        /* ══ 3-COLUMN GRID: [01] | [content] | [videos] ══ */
         .campaign-inner {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          align-items: stretch;
-          min-height: 360px;
+         display: grid;
+  grid-template-columns: 110px 1fr 1.5fr;
+  align-items: stretch;
+  gap: 0;   /* ← make sure no gap */
         }
+
+        /* Reversed: [videos] | [content] | [01] */
         .campaign-reversed {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1.5fr 1fr 110px;
         }
-        .campaign-reversed .campaign-body { order: 2; }
-        .campaign-reversed .campaign-media { order: 1; }
+        .campaign-reversed .campaign-number-col { order: 3; }
+        .campaign-reversed .campaign-body       { order: 2; }
+        .campaign-reversed .campaign-media      { order: 1; }
 
-        @media (max-width: 960px) {
-          .campaign-inner,
-          .campaign-reversed { grid-template-columns: 1fr; }
-          .campaign-reversed .campaign-body,
-          .campaign-reversed .campaign-media { order: unset; }
+        /* ── Col 1: Number ── */
+        .campaign-number-col {
+        display: flex;
+  align-items: flex-start;     /* ← was: center */
+  justify-content: center;
+  padding: 2rem 1rem;
+  padding-top: 2.5rem; 
+          border-right: 1px solid hsl(var(--border));
+          box-sizing: border-box;
         }
+        .campaign-dark    .campaign-number-col { border-color: hsl(220 10% 20%); }
+        .campaign-bg-warm .campaign-number-col { border-color: hsl(36 20% 88%); }
+        .campaign-bg-cool .campaign-number-col { border-color: hsl(210 15% 88%); }
+        .campaign-bg-sage .campaign-number-col { border-color: hsl(150 15% 88%); }
 
-        /* ✅ FIXED: proper centering with justify-content center */
+        /* Reversed: number col border flips to left */
+        .campaign-reversed .campaign-number-col {
+          border-right: none;
+          border-left: 1px solid hsl(var(--border));
+        }
+        .campaign-dark    .campaign-reversed .campaign-number-col { border-color: hsl(220 10% 20%); }
+        .campaign-bg-warm .campaign-reversed .campaign-number-col { border-color: hsl(36 20% 88%); }
+        .campaign-bg-sage .campaign-reversed .campaign-number-col { border-color: hsl(150 15% 88%); }
+
+        .campaign-number {
+          font-family: 'DM Serif Display', Georgia, serif;
+          font-size: 4.5rem;
+          font-weight: 500;
+          line-height: 1;
+  color: rgba(200, 151, 58, 0.65);   /* ← #C8973A at 35% opacity */
+          display: block;
+          text-align: center;
+        }
+        .campaign-dark .campaign-number { color: hsl(220 10% 28%); }
+
+        /* ── Col 2: Content — LEFT aligned ── */
         .campaign-body {
-          padding: 3rem 3rem 3rem 3.5rem;
+          padding: 2.5rem 2.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          height: 100%;
+          text-align: left;
           border-right: 1px solid hsl(var(--border));
           box-sizing: border-box;
         }
         .campaign-reversed .campaign-body {
-          padding: 3rem 3.5rem 3rem 3rem;
           border-right: none;
           border-left: 1px solid hsl(var(--border));
         }
@@ -510,25 +538,22 @@ function Campaigns() {
         .campaign-bg-cool .campaign-body { border-color: hsl(210 15% 88%); }
         .campaign-bg-sage .campaign-body { border-color: hsl(150 15% 88%); }
 
-        .campaign-number {
-          font-family: 'DM Serif Display', Georgia, serif;
-          font-size: 4rem; font-weight: 700; line-height: 1;
-          color: hsl(var(--foreground)/0.12);
-          display: block; margin-bottom: 0.35rem;
-        }
-        .campaign-dark .campaign-number { color: hsl(220 10% 28%); }
-
         .campaign-eyebrow {
-          font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
-          color: hsl(var(--primary)); font-weight: 600;
-          display: block; margin-bottom: 0.55rem;
+          font-size: 0.6rem;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: hsl(var(--primary));
+          font-weight: 600;
+          display: block;
+          margin-bottom: 0.5rem;
         }
         .campaign-dark .campaign-eyebrow { color: #b9a0f4; }
 
-        /* ✅ FIXED: white-space pre-line makes \n render as actual line break */
         .campaign-title {
-          font-size: clamp(1.9rem, 2.8vw, 2.8rem);
-          font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;
+          font-size: clamp(1.9rem, 2.2vw, 2.6rem);
+          font-weight: 700;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
           color: hsl(var(--foreground));
           margin-bottom: 0.85rem;
           white-space: pre-line;
@@ -536,43 +561,55 @@ function Campaigns() {
         .campaign-dark .campaign-title { color: #fff; }
 
         .campaign-desc {
-          font-size: 0.83rem; line-height: 1.7;
+          font-size: 0.83rem;
+          line-height: 1.7;
           color: hsl(var(--muted-foreground));
           margin-bottom: 1.25rem;
-          max-width: 440px;
+          max-width: 360px;
+          text-align: left;
         }
         .campaign-dark .campaign-desc { color: hsl(220 10% 65%); }
 
-        /* Meta row — bordered box with two columns */
+        /* Meta row */
         .campaign-meta {
-          display: flex; align-items: stretch;
-          margin-bottom: 1.5rem; width: fit-content;
+          display: flex;
+          align-items: stretch;
+          margin-bottom: 1.5rem;
           border: 1px solid hsl(var(--border));
-          border-radius: 8px; overflow: hidden;
+          border-radius: 8px;
+          overflow: hidden;
           padding: 0.55rem 0;
         }
-        .campaign-dark .campaign-meta { border-color: hsl(220 10% 22%); }
+        .campaign-dark    .campaign-meta { border-color: hsl(220 10% 22%); }
         .campaign-bg-warm .campaign-meta { border-color: hsl(36 20% 84%); }
         .campaign-bg-cool .campaign-meta { border-color: hsl(210 15% 84%); }
         .campaign-bg-sage .campaign-meta { border-color: hsl(150 15% 84%); }
 
         .meta-item {
-          display: flex; flex-direction: column; gap: 3px;
-          padding: 0 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          padding: 0 1.1rem;
+          align-items: flex-start;
         }
         .meta-icon { width: 13px; height: 13px; color: hsl(var(--muted-foreground)); margin-bottom: 1px; }
         .meta-label {
-          font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em;
+          font-size: 0.58rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
           color: hsl(var(--muted-foreground));
         }
         .meta-val {
-          font-size: 0.82rem; font-weight: 600;
+          font-size: 0.82rem;
+          font-weight: 600;
           color: hsl(var(--foreground));
         }
         .campaign-dark .meta-val   { color: #fff; }
         .campaign-dark .meta-label { color: hsl(220 10% 55%); }
         .meta-divider {
-          width: 1px; background: hsl(var(--border)); align-self: stretch;
+          width: 1px;
+          background: hsl(var(--border));
+          align-self: stretch;
         }
         .campaign-dark    .meta-divider { background: hsl(220 10% 22%); }
         .campaign-bg-warm .meta-divider { background: hsl(36 20% 84%); }
@@ -581,14 +618,17 @@ function Campaigns() {
 
         /* Watch button */
         .watch-btn {
-          display: inline-flex; align-items: center; gap: 0.55rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.55rem;
           border: 1.5px solid var(--btn-color, hsl(var(--primary)));
           color: var(--btn-color, hsl(var(--primary)));
           background: transparent;
-          font-size: 0.78rem; font-weight: 600;
+          font-size: 0.78rem;
+          font-weight: 600;
           padding: 0.4rem 0.4rem 0.4rem 1.1rem;
           border-radius: 999px;
-          text-decoration: none; width: fit-content;
+          text-decoration: none;
           transition: background 0.2s, color 0.2s;
         }
         .watch-btn:hover {
@@ -596,30 +636,44 @@ function Campaigns() {
           color: #fff;
         }
         .watch-btn-icon {
-          width: 28px; height: 28px; border-radius: 50%;
-          display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
         }
         .watch-btn:hover .watch-btn-icon { background: rgba(255,255,255,0.2) !important; }
 
-        /* Media side */
+        /* ── Col 3: Media ── */
         .campaign-media {
-          padding: 2rem 2.5rem 2rem 2rem;
-          display: flex; align-items: center; overflow: hidden;
-        }
-        .campaign-reversed .campaign-media {
-          padding: 2rem 2rem 2rem 2.5rem;
+           padding: 1.5rem 1rem;   /* ← was: 1.5rem 2rem */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
         }
 
         /* ══ PLAYLIST STRIP ══ */
         .playlist-strip-wrap { position: relative; width: 100%; }
-        .strip-scroll { scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 4px; }
-        .strip-scroll::-webkit-scrollbar { display: none; }
+.strip-scroll { 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  padding-bottom: 4px;
+  gap: 0.5rem !important;   /* ← was gap-3 (0.75rem) in JSX, tighten tiles */
+}        .strip-scroll::-webkit-scrollbar { display: none; }
         .strip-arrow {
-          position: absolute; top: 42%; transform: translateY(-50%); z-index: 10;
-          background: hsl(var(--background)); border: 1px solid hsl(var(--border));
-          width: 30px; height: 30px; border-radius: 50%;
+          position: absolute;
+          top: 42%;
+          transform: translateY(-50%);
+          z-index: 10;
+          background: hsl(var(--background));
+          border: 1px solid hsl(var(--border));
+          width: 30px; height: 30px;
+          border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
-          cursor: pointer; transition: background 0.2s;
+          cursor: pointer;
+          transition: background 0.2s;
           box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .strip-arrow:hover { background: hsl(var(--muted)); }
@@ -630,9 +684,13 @@ function Campaigns() {
 
         .strip-tile { cursor: pointer; text-decoration: none; }
         .strip-thumb {
-          width: 168px; height: 235px;
-          border-radius: 12px; overflow: hidden; position: relative;
-          background: hsl(var(--muted)); border: 1px solid hsl(var(--border));
+          width: 168px;
+          height: 235px;
+          border-radius: 12px;
+          overflow: hidden;
+          position: relative;
+          background: hsl(var(--muted));
+          border: 1px solid hsl(var(--border));
           flex-shrink: 0;
         }
         .campaign-dark    .strip-thumb { background: hsl(220 20% 17%); border-color: hsl(220 10% 24%); }
@@ -646,7 +704,8 @@ function Campaigns() {
           background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.12) 55%, transparent 100%);
           display: flex; flex-direction: column;
           align-items: center; justify-content: center;
-          transition: background 0.2s; padding: 0.75rem;
+          transition: background 0.2s;
+          padding: 0.75rem;
         }
         .strip-tile:hover .strip-play-overlay {
           background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 55%, transparent 100%);
@@ -654,13 +713,16 @@ function Campaigns() {
         .strip-play-btn {
           width: 38px; height: 38px; border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.45); flex-shrink: 0;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+          flex-shrink: 0;
         }
         .strip-overlay-title {
           position: absolute; bottom: 0.65rem; left: 0; right: 0;
-          text-align: center; font-size: 0.6rem; font-weight: 600;
+          text-align: center;
+          font-size: 0.6rem; font-weight: 600;
           color: #fff; letter-spacing: 0.03em; line-height: 1.3;
-          padding: 0 0.5rem; text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+          padding: 0 0.5rem;
+          text-shadow: 0 1px 4px rgba(0,0,0,0.7);
         }
 
         /* ══ BEHIND THE CAMPAIGNS ══ */
@@ -679,14 +741,16 @@ function Campaigns() {
         .cta-card {
           background: hsl(var(--primary)/0.05);
           border: 1px solid hsl(var(--primary)/0.2);
-          border-radius: 1.5rem; padding: 3rem 2rem;
+          border-radius: 1.5rem;
+          padding: 3rem 2rem;
         }
         .cta-btn {
           display: inline-flex; align-items: center; gap: 0.5rem;
           background: hsl(var(--primary)); color: #fff;
           font-size: 0.9rem; font-weight: 600;
           padding: 0.7rem 1.75rem; border-radius: 8px;
-          text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+          text-decoration: none;
+          transition: opacity 0.2s, transform 0.2s;
         }
         .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
 
@@ -698,9 +762,26 @@ function Campaigns() {
         [data-reveal].revealed .reveal-item { opacity: 1; transform: translateY(0); }
 
         /* ══ MOBILE ══ */
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
+          .campaign-inner,
+          .campaign-reversed {
+            grid-template-columns: 1fr;
+          }
+          .campaign-reversed .campaign-number-col,
+          .campaign-reversed .campaign-body,
+          .campaign-reversed .campaign-media { order: unset; }
+
+          .campaign-number-col {
+            border-right: none !important;
+            border-left: none !important;
+            border-bottom: 1px solid hsl(var(--border));
+            padding: 1.25rem 1.75rem;
+            justify-content: flex-start;
+            color: hsl(var(--primary));
+            align-items: flex-start;
+          }
           .campaign-body {
-            padding: 1.75rem;
+  padding: 2.5rem 1.75rem;   /* ← was: 2.5rem 2.5rem */
             border-right: none !important;
             border-left: none !important;
             border-bottom: 1px solid hsl(var(--border));

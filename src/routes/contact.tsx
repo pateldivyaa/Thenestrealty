@@ -428,7 +428,6 @@ function ContactHero() {
                   <option>Sole Selling Enquiry</option>
                   <option>Project Marketing</option>
                   <option>Investment Consulting</option>
-                  <option>Brand Partnership</option>
                 </select>
 
                 <ChevronDown
@@ -495,7 +494,7 @@ function ContactHero() {
                   <ArrowRight size={16} />
                 </button>
 
-                <a
+                {/* <a
                   href="tel:+919999999999"
                   style={{
                     display: "flex",
@@ -510,7 +509,7 @@ function ContactHero() {
                 >
                   <Phone size={16} color="#b58a3c" />
                   Call us directly
-                </a>
+                </a> */}
               </div>
             </form>
           </div>
@@ -719,7 +718,7 @@ function ContactHero() {
                       fontFamily: "'DM Sans', sans-serif",
                     }}
                   >
-                    connect@thenestrealty.in
+                    info@thenestrealty@gmail.com
                   </p>
                 </div>
               </div>
@@ -1397,7 +1396,7 @@ function ContactPage() {
                 </a>
 
                 {/* OR */}
-                <span
+                {/* <span
                   style={{
                     color: "rgba(255,255,255,0.6)",
                     fontSize: "0.82rem",
@@ -1405,10 +1404,10 @@ function ContactPage() {
                   }}
                 >
                   or
-                </span>
+                </span> */}
 
                 {/* CALL BUTTON */}
-                <a
+                {/* <a
                   href="tel:+919876543210"
                   style={{
                     minHeight: "48px",
@@ -1435,7 +1434,7 @@ function ContactPage() {
                 >
                   <Phone size={16} color="#d4a14e" />
                   Call us: +91  9925004858
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -10,8 +10,9 @@ const links = [
   { to: "/projects", label: "Our Project" },
   { to: "/services", label: "Services" },
   // { to: "/faqs", label: "FAQs" },
+  { to: "/campaigns", label: "Campaigns" },
   { to: "/career", label: "Career" },
-  { to: "/campaigns", label: "campaigns" },
+
   { to: "/contact", label: "Contact Us" },
 ] as const;
 
@@ -54,7 +55,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href="tel:+919876543210"
+          href="/contact"
           className="hidden lg:inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-medium hover:bg-primary-dark transition-colors"
         >
           <Phone className="h-4 w-4" /> Call Now
