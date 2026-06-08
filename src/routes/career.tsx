@@ -101,7 +101,7 @@ const culture = [
 ];
 
 const steps = [
-  { n: "01", title: "Send your resume", desc: "Email info@thenestrealty@gmail.com — one line about why you." },
+  { n: "01", title: "Send your resume", desc: "Email info.thenestrealty@gmail.com — one line about why you." },
   { n: "02", title: "Intro call", desc: "20 minutes. We want to understand what you're looking for." },
   { n: "03", title: "Meet the team", desc: "In-person at our Ahmedabad office." },
   { n: "04", title: "Decision", desc: "We move fast. Typically within a week." },
@@ -135,7 +135,7 @@ function RoleRow({ role, type, location, dept, desc, index }: {
   return (
     <a
       ref={ref as any}
-      href="mailto:info@thenestrealty@gmail.com"
+      href="mailto:info.thenestrealty@gmail.com"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -1541,7 +1541,7 @@ APPLY FORM — SECTION
               }}
             >
               <a
-                href="mailto:info@thenestrealty@gmail.com"
+                href="mailto:info.thenestrealty@gmail.com"
                 style={{
                   height: "58px",
                   padding: "0 2rem",
@@ -1561,7 +1561,7 @@ APPLY FORM — SECTION
                 }}
               >
                 <Mail size={18} />
-                info@thenestrealty@gmail.com
+                info.thenestrealty@gmail.com
               </a>
 
               <p

@@ -95,7 +95,7 @@ const projects: Project[] = [
   {
     imgs: [ar1],
     title: "Aryaman Residency",
-    location: "Vatva, Ahmedabad, Gujarat",
+    location: "Narol, Ahmedabad, Gujarat",
     contact: ["9313213944"],
     specs: [
       { label: "2 BHK Flats", sizes: "136 Sq.Yd" },
@@ -156,7 +156,7 @@ const projects: Project[] = [
   {
     imgs: [a1],
     title: "Aqua Green City",
-    location: "Ahmedabad, Gujarat",
+    location: "Naroda, Ahmedabad, Gujarat",
     contact: ["7096950550"],
     specs: [
       { label: "2 BHK Flats", sizes: "134, 140 Sq.Yd" },
@@ -168,8 +168,8 @@ const projects: Project[] = [
   },
   {
     imgs: [ph],
-    title: "Prarthana Homes",
-    location: "New, Vastral, Ahmedabad, Gujarat",
+    title: "PRARTHNA Homes",
+    location: "New Vastral, Ahmedabad, Gujarat",
     contact: ["9925003055"],
     specs: [{ label: "4 BHK Bungalows", sizes: "Plot 86–134 Sq.Yd · Build 166 Sq.Yd" }],
     tag: "Residential",
@@ -179,7 +179,7 @@ const projects: Project[] = [
   {
     imgs: [kv],
     title: "Kahan Villa",
-    location: "Ahmedabad, Gujarat",
+    location: "New Vastral, Ahmedabad, Gujarat",
     contact: ["9925001037"],
     specs: [{ label: "4 BHK Bungalows", sizes: "Plot 99–125 Sq.Yd · Build 180 Sq.Yd · G+2" }],
     tag: "Premium",
@@ -189,7 +189,7 @@ const projects: Project[] = [
   {
     imgs: [h],
     title: "Harmony 71",
-    location: "Lambha, Ahmedabad, Gujarat",
+    location: "New lambha, Ahmedabad, Gujarat",
     contact: ["9925062394"],
     specs: [{ label: "4 BHK Bungalows", sizes: "Plot 65.50–173 Sq.Yd · Build 165–203 Sq.Yd" }],
     tag: "Commercial",

@@ -116,7 +116,7 @@ export function Footer() {
 
             <li className="flex gap-2">
               <Mail className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-              info@thenestrealty@gmail.com
+              info.thenestrealty@gmail.com
             </li>
           </ul>
         </div>

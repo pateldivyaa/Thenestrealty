@@ -718,7 +718,7 @@ function ContactHero() {
                       fontFamily: "'DM Sans', sans-serif",
                     }}
                   >
-                    info@thenestrealty@gmail.com
+                    info.thenestrealty@gmail.com
                   </p>
                 </div>
               </div>

@@ -667,7 +667,7 @@ export function ContactSection() {
               {[
                 ["📍", "509,Hilltown Impressa, Opp.Parikh Hospital, Nikol, Ahmedabad, India 380049"],
                 ["📞", "+91  9925004160"],
-                ["✉️", "info@thenestrealty@gmail.com"],
+                ["✉️", "info.thenestrealty@gmail.com"],
               ].map(([icon, text], i) => (
                 <div
                   key={text}
